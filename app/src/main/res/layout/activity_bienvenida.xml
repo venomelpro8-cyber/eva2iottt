@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3F51B5"> <!-- Color azul índigo intenso de fondo -->
+
+    <!-- Mitad inferior en gris muy claro para dar un efecto de corte moderno -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="280dp"
+        android:background="#F5F7FA" />
+
+    <!-- Tarjeta Central Flotante -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="30dp"
+        android:background="@android:color/white"
+        android:elevation="12dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="35dp">
+
+        <!-- Emoji amigable y gigante en lugar de un ícono aburrido -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👋"
+            android:textSize="60sp"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Texto de Bienvenida Dinámico -->
+        <TextView
+            android:id="@+id/tvBienvenida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Bienvenido al sistema"
+            android:textAlignment="center"
+            android:textColor="#283593"
+            android:textSize="28sp"
+            android:textStyle="bold" /> <!-- Título en azul oscuro para resaltar -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+            android:text="Es genial tenerte de vuelta. Tu sesión está iniciada de forma segura."
+            android:textAlignment="center"
+            android:textColor="#666666"
+            android:textSize="16sp" />
+
+        <!-- Botón con color Rosado/Magenta súper llamativo (contrasta con el azul) -->
+        <Button
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="#FF4081"
+            android:text="CERRAR SESIÓN"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

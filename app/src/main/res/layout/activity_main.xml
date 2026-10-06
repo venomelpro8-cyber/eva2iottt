@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3F51B5"
+    tools:context=".MainActivity">
+
+   <!-- ScrollView para poder bajar cuando se abra el teclado -->
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:fillViewport="true"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent">
+
+      <!-- Contenedor general que da márgenes a los lados -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:orientation="vertical"
+          android:padding="20dp">
+
+         <!-- LA TARJETA 100% BLANCA Y SÓLIDA -->
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@android:color/white"
+             android:elevation="12dp"
+             android:orientation="vertical"
+             android:padding="25dp">
+
+            <!-- Logo Superior -->
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                app:srcCompat="@drawable/imagen" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:text="CREAR NUEVO USUARIO"
+                android:textAlignment="center"
+                android:textColor="#283593"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- RUT -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="RUT"
+                android:textColor="#444444"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/rut"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
+                android:background="#E8EAED"
+                android:hint="Ej: 12345678-9"
+                android:padding="12dp"
+                android:textColor="@android:color/black"
+                android:maxLength="10" />
+
+            <!-- CONTRASEÑA -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="CONTRASEÑA"
+                android:textColor="#444444"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
+                android:background="#E8EAED"
+                android:hint="Contraseña segura"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textColor="@android:color/black" />
+
+            <!-- NOMBRE -->
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="NOMBRE"
+                android:textColor="#444444"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/nombre"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
+                android:background="#E8EAED"
+                android:hint="Escribe el nombre"
+                android:padding="12dp"
+                android:textColor="@android:color/black" />
+
+            <!-- APELLIDO -->
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="APELLIDO"
+                android:textColor="#444444"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/apellido"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
+                android:background="#E8EAED"
+                android:hint="Escribe el apellido"
+                android:padding="12dp"
+                android:textColor="@android:color/black" />
+
+            <!-- TELÉFONO -->
+            <TextView
+                android:id="@+id/txt4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="TELÉFONO"
+                android:textColor="#444444"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/telefono"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
+                android:background="#E8EAED"
+                android:hint="Ej: 9 1234 5678"
+                android:inputType="phone"
+                android:padding="12dp"
+                android:textColor="@android:color/black" />
+
+            <!-- CORREO -->
+            <TextView
+                android:id="@+id/txt5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="CORREO ELECTRÓNICO"
+                android:textColor="#444444"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/correo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
+                android:background="#E8EAED"
+                android:hint="usuario@correo.com"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textColor="@android:color/black" />
+
+            <!-- FECHA DE NACIMIENTO -->
+            <TextView
+                android:id="@+id/txt7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="FECHA DE NACIMIENTO"
+                android:textColor="#444444"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/fecha"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="25dp"
+                android:background="#E8EAED"
+                android:hint="DD/MM/AAAA"
+                android:padding="12dp"
+                android:textColor="@android:color/black" />
+
+            <!-- BOTONES -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+               <Button
+                   android:id="@+id/acceso"
+                   android:layout_width="0dp"
+                   android:layout_height="60dp"
+                   android:layout_marginEnd="5dp"
+                   android:layout_weight="1"
+                   android:backgroundTint="@android:color/holo_green_dark"
+                   android:text="REGISTRAR"
+                   android:textColor="@android:color/white"
+                   android:textStyle="bold" />
+
+               <Button
+                   android:id="@+id/mostrar"
+                   android:layout_width="0dp"
+                   android:layout_height="60dp"
+                   android:layout_marginStart="5dp"
+                   android:layout_weight="1"
+                   android:backgroundTint="#D32F2F"
+                   android:text="ATRAS"
+                   android:textColor="@android:color/white"
+                   android:textStyle="bold" />
+            </LinearLayout>
+
+         </LinearLayout>
+      </LinearLayout>
+   </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

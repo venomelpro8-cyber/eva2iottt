@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="30dp"
+            app:srcCompat="@drawable/imagen" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="INICIAR SESIÓN"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Cambiado a RUT -->
+        <EditText
+            android:id="@+id/loginRut"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/darker_gray"
+            android:hint="Ingrese su RUT (Ej: 12345678-9)"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/loginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@android:color/darker_gray"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Botones Ingresar y Limpiar agrupados -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:text="INGRESAR"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnLimpiar"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:text="LIMPIAR"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Botón para crear usuario que te llevará al formulario -->
+        <Button
+            android:id="@+id/btnCrearUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="CREAR NUEVO USUARIO"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- NUEVO BOTÓN: Recuperar Contraseña -->
+        <Button
+            android:id="@+id/btnCambiarPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="¿Olvidaste tu contraseña?"
+            android:backgroundTint="@android:color/transparent"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
